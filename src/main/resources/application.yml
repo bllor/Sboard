@@ -1,0 +1,54 @@
+jwt:
+    issuer: duki0105@gmail.com
+    secret: VdmRJpYPADdk8Q7IumXgNFnbyizHtoBs
+logging:
+    file:
+        name: log/Sboard.log
+    level:
+        jdbc:
+            connection: info
+            resultsettable: info
+            sqlonly: info
+            sqltiming: info
+        org:
+            hibernate: info
+            springframework:
+                security: debug
+        root: info
+server:
+    servlet:
+        context-path: /
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: 1234qweR!
+        url: jdbc:mysql://13.124.240.34:3306/Jboard
+        username: jboard
+    devtools:
+        livereload:
+            enabled: true
+        restart:
+            enabled: false
+    jpa:
+        database: mysql
+        hibernate:
+            ddl-auto: none
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        properties:
+            hibernate:
+                format_sql: true
+                show_sql: true
+                use_sql_comments: true
+    security:
+        user:
+            name: user
+            password: 1234
+    thymeleaf:
+        cache: false
+        prefix: file:src/main/resources/templates/
+
+    servlet:
+        multipart:
+            location: src/main/resources/static/file #경로
+            max-file-size: 10MB #크기
