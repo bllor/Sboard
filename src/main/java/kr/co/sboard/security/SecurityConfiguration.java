@@ -46,9 +46,11 @@ public class SecurityConfiguration {
 			.authorizeHttpRequests(AuthorizeRequests ->AuthorizeRequests
 														.requestMatchers("/admin/**").hasRole("ADMIN")
 														.requestMatchers("/article/**").hasAnyRole("ADMIN","MANAGER","USER")
+														.requestMatchers("/").permitAll()
 														.requestMatchers("/user/**").permitAll()
-														.requestMatchers("/").authenticated()
-														.requestMatchers("/vendor/**", "/js/**", "/dist/**", "/data/**", "/less/**").permitAll());
+														.requestMatchers("/user/login").permitAll()
+														.requestMatchers("/vendor/**", "/js/**", "/dist/**", "/data/**", "/less/**").permitAll()
+														);
 
 		return http.build();
 				//개발할 때는 crsf를 해제시켜 놓는다.

@@ -34,7 +34,7 @@ public class UserController {
     @PostMapping("/user/register")
     public String register(UserDTO dto){
         userService.save(dto);
-        return "redirect:/user/login";
+        return "redirect:user/login";
     }
 
 

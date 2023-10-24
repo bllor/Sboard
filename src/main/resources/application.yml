@@ -22,7 +22,7 @@ spring:
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         password: 1234qweR!
-        url: jdbc:mysql://13.124.240.34:3306/Jboard
+        url: jdbc:mysql://13.125.249.38:3306/Jboard
         username: jboard
     devtools:
         livereload:
@@ -46,7 +46,7 @@ spring:
             password: 1234
     thymeleaf:
         cache: false
-        prefix: file:src/main/resources/templates/
+        prefix: classpath:/templates
 
     servlet:
         multipart:
