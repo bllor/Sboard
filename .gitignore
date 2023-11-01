@@ -35,3 +35,7 @@ application.properties
 
 ### VS Code ###
 .vscode/
+
+
+#application.yml업로드 제거
+**/application.yml
