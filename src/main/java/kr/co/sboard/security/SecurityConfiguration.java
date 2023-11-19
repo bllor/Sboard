@@ -49,7 +49,7 @@ public class SecurityConfiguration {
 														.requestMatchers("/").permitAll()
 														.requestMatchers("/user/**").permitAll()
 														.requestMatchers("/user/login").permitAll()
-														.requestMatchers("/vendor/**", "/js/**", "/dist/**", "/data/**", "/less/**").permitAll()
+														.requestMatchers("/vendor/**", "/js/**", "/dist/**", "/data/**", "/less/**", "/profile").permitAll()
 														);
 
 		return http.build();
