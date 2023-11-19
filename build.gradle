@@ -47,4 +47,6 @@ tasks.named('test') {
 }
 
 // plain-jar 생성 금지
-jar.enabled = false
+jar {
+    enabled = false
+}
