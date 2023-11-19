@@ -64,6 +64,7 @@ jobs:
       # script files 복사
       - name: Copy script
         run: |
+          mkdir -p ./deploy
           cp -r ./scripts/*.sh ./deploy
           cp -r ./scripts/*.sh ./health
           cp -r ./scripts/*.sh ./profile
