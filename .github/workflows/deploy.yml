@@ -63,7 +63,7 @@ jobs:
           
       # script files 복사
       - name: Copy script
-        run: cp ./scripts/*.sh ./start ./stop ./switch ./health ./profile
+        run: cp ./scripts/*.sh ./start ./stop ./switch ./profile ./health
       
       # S3에 빌드 결과 업로드
       - name: Upload to S3

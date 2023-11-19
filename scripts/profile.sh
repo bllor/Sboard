@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # 쉬고 있는 profile 찾기 : real1이 사용 중이면 real2가 쉼
 function find_idle_profile()
 {
@@ -23,7 +24,8 @@ function find_idle_profile()
   echo "${IDLE_PROFILE}"
   #idle_profile을 출력한 후 그 값을 캐치하는 방식을 사용
 }
-function find_idle_port() {
+function find_idle_port()
+{
     IDLE_PROFILE=$(find_idle_profile)
     if [ ${IDLE_PROFILE} == real1 ]
     then
