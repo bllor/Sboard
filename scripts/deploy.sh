@@ -22,4 +22,7 @@ fi
 
 DEPLOY_JAR=$DEPLOY_PATH$JAR_NAME
 echo "> DEPLOY_JAR 배포"    >> /home/$PROJECT_NAME/deploy.log
-nohup java -jar $DEPLOY_JAR >> /home/$PROJECT_NAME/deploy.log 2>/home/$PROJECT_NAME/deploy_err.log &
+nohup java -jar \
+  -Dspring.config.location=classpath:/application.yml,classpath:/application-$IDLE_PROFILE.yml\
+   -Dspring.profiles.active=$IDLE_PROFILE \
+    DEPLOY_JAR > $REPOSITORY/nohup.out 2>&1 &
